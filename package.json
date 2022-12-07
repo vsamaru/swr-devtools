@@ -1,0 +1,32 @@
+{
+  "name": "swr-devtools",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build": "run-s build:devtools build:panel build:extensions",
+    "build:devtools": "yarn workspace swr-devtools build",
+    "build:demo": "yarn workspace swr-devtools-demo build",
+    "build:extensions": "yarn workspace swr-devtools-extensions build",
+    "build:panel": "yarn workspace swr-devtools-panel build",
+    "deploy:demo": "run-s build:devtools build:panel build:demo",
+    "prerelease": "",
+    "release": "lerna publish --conventional-commits",
+    "start:demo": "yarn workspace swr-devtools-demo dev",
+    "start:dev": "yarn workspace swr-devtools start",
+    "start:panel": "yarn workspace swr-devtools-panel start",
+    "start": "run-p -l start:*"
+  },
+
+  "devDependencies": {
+    "@cybozu/eslint-config": "^17.0.3",
+   
+    "lerna": "^5.5.2",
+    "npm-run-all": "^4.1.5",
+  
+    "rimraf": "^3.0.2"
+  }
+}

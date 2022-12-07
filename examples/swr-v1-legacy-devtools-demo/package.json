@@ -1,0 +1,23 @@
+{
+  "name": "swr-v1-legacy-devtools-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.5",
+    "sugar-high": "^0.4.6",
+    "swr": "1.1.x"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "babel-plugin-styled-components": "^2.0.7"
+  }
+}
